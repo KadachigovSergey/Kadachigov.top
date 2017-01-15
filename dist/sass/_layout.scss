@@ -1,0 +1,58 @@
+.my-photo {
+  text-align: center;
+  padding: 70px 0 80px;
+  border-radius: 50%;
+  img {
+    width: 75%;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 1px #606060;
+    background: #858585;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.box-top-left, .box-top-right, .box-bot-left, .box-bot-right {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  color: $colorTextLight;
+}
+.box-top-left {
+  top: 0;
+  left: 0;
+  border-top: 3px solid;
+  border-left: 3px solid;
+}
+.box-top-right {
+  top: 0;
+  right: 0;
+  border-top: 3px solid;
+  border-right: 3px solid;
+
+}
+.box-bot-left {
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+}
+.box-bot-right {
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+}

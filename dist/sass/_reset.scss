@@ -1,0 +1,53 @@
+/* хром, сафари */
+body::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+.element { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.element { overflow: -moz-scrollbars-none; }
+body {
+  //overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  overflow-x: hidden;
+  background: rgba(23, 26, 33,1);
+  //background: $colorTextBlack;
+  background-size: cover;
+  line-height: 1;
+  font: 14px/1 $regular;
+  margin: 0 auto;
+  color: #fff;
+  img {
+    border: none;
+    max-width: 100%;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover{
+      color: #000;
+      text-decoration: none;
+    }
+    &:focus{
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  &*:hover{
+    outline: none;
+    color: #1b6d85;
+  }
+}

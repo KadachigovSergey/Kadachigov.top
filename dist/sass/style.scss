@@ -1,0 +1,474 @@
+// custom var
+@import "custom";
+// fonts
+@import "fonts";
+//font awesome
+@import "font-awesome";
+// reset
+@import "reset";
+// default-class
+@import "default-class";
+// layout
+@import "layout";
+
+//START MAIN PAGE***************************************
+.main-page {
+  position: relative;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-transition: height 0s, opacity 0s;
+  -moz-transition: height 0s, opacity 0s;
+  -ms-transition: height 0s, opacity 0s;
+  -o-transition: height 0s, opacity 0s;
+  transition: height 0s, opacity 0s;
+  img {
+    width: 40%;
+  }
+  .box-top-left, .box-top-right, .box-bot-left, .box-bot-right {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    color: $colorTextLight;
+    margin: 40px;
+  }
+}
+//END MAIN PAGE*****************************************
+
+//START CURRICULUM PAGE*********************************
+.curriculum-page {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: height 1s 1s, opacity 0.5s 1s;
+  -moz-transition: height 1s 1s, opacity 0.5s 1s;
+  -ms-transition: height 1s 1s, opacity 0.5s 1s;
+  -o-transition: height 1s 1s, opacity 0.5s 1s;
+  transition: height 1s 1s, opacity 0.5s 1s;
+  &.vision {
+    opacity: 1;
+    height: 3400px;
+    -webkit-transition: height 3s 0s, opacity 2s 0s;
+    -moz-transition: height 3s 0s, opacity 2s 0s;
+    -ms-transition: height 3s 0s, opacity 2s 0s;
+    -o-transition: height 3s 0s, opacity 2s 0s;
+    transition: height 1.4s cubic-bezier(1, .55, .94, .39) 0s, opacity 2s 0s;
+    .button-down{
+      opacity: 1;
+      -webkit-transition: opacity .2s 1s;
+      -moz-transition: opacity .2s 1s ;
+      -ms-transition: opacity .2s 1s ;
+      -o-transition: opacity .2s 1s ;
+      transition: opacity .2s 1s ;
+    }
+    &+.main-page{
+      -webkit-transition: height 1s 1s, opacity 0.5s 1s !important;
+      -moz-transition: height 1s 1s, opacity 0.5s 1s !important;
+      -ms-transition: height 1s 1s, opacity 0.5s 1s !important;
+      -o-transition: height 1s 1s, opacity 0.5s 1s !important;
+      transition: height 1s 1s, opacity 0.5s 1s !important;
+    }
+  }
+  .button-down {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 160px;
+    padding-bottom: 100px;
+    //opacity: 0;
+  }
+  //&.vision-late{
+  //  //-webkit-transition: height 0s 1s, opacity 2s;
+  //  //-moz-transition: height 3s 1s, opacity 2s;
+  //  //-ms-transition: height 3s 1s, opacity 2s;
+  //  //-o-transition: height 3s 1s, opacity 2s;
+  //  //transition: height 3s 1s, opacity 2s;
+  //  opacity: 1;
+  //  height: 3400px;
+  //}
+}
+
+//head fo curriculum page
+.header-curriculum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto 50px;
+  .title {
+    font-size: 3.5em;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: $colorTextLight;
+    margin: 0 20px;
+    text-align: center;
+    font-family: $bold;
+  }
+  .line {
+    height: 3px;
+    background: $colorTextLight;
+    width: 20%;
+    border-radius: 50px;
+  }
+}
+
+//curriculum content
+.curriculum-vitae {
+  display: flex;
+  width: 1200px;
+  padding: 5px 0 5px 0;
+  margin: 0 auto 50px;
+  background: url("../img/bg-curriculum-vitae.jpg");
+  .personal-info {
+    margin: 10px 0;
+    padding: 0 30px 0 0;
+    height: 99%;
+    .name {
+      color: $colorTextBlack;
+      padding-bottom: 80px;
+      span {
+        font-size: 4em;
+        line-height: 1.2;
+        &:last-child {
+          color: $colorTextGrey;
+          font: 1.5em/4 $light;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .information {
+      .item-text {
+        padding: 0 10%;
+      }
+    }
+    //social block
+    .social {
+      & > span {
+        &.item-text {
+          margin-bottom: 20px;
+        }
+      }
+      .item-box {
+        &:hover {
+          border: 3px solid $colorTextBlack;
+          .item-text {
+            color: $colorTextBlack;
+          }
+        }
+        -webkit-transition: .2s;
+        -moz-transition: .2s ;
+        -ms-transition: .2s ;
+        -o-transition: .2s ;
+        transition: .2s ;
+
+        border: 3px solid $colorTextGrey;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border-radius: 5px;
+        height: 60px;
+        width: 60px;
+        margin: 18px auto 29px;
+        .item-text {
+          -webkit-transition: .2s;
+          -moz-transition: .2s ;
+          -ms-transition: .2s ;
+          -o-transition: .2s ;
+          transition: .2s ;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          display: inline-block;
+          margin: 0;
+          font-size: 22px;
+
+        }
+        .in {
+          -webkit-transition: .2s;
+          -moz-transition: .2s ;
+          -ms-transition: .2s ;
+          -o-transition: .2s ;
+          transition: .2s ;
+          margin-top: -3px;
+        }
+      }
+    }
+
+  }
+  //CONTENT FOR CURRICULUM
+  .info {
+    padding: 80px 0 0 60px;
+    border-left: 3px solid #bcbdbd;
+    &.info-block {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .line {
+        height: 3px;
+        background: #444343;
+        border-radius: 50px;
+        width: 100%;
+        margin-right: 10px;
+      }
+      .info-block-content {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 50px 0 0 0;
+        .person {
+          display: flex;
+          align-items: center;
+          .my-photo {
+            width: 185px;
+            padding: 0;
+          }
+        }
+        .comment {
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          width: 70%;
+        }
+        .guidance {
+          padding: 20px 50px 0 0;
+          span {
+            font-family: $sans;
+          }
+        }
+        &.mar-bot {
+          margin-bottom: 100px;
+        }
+        .info-title {
+          margin-bottom: 0;
+          padding: 0 80px 5px 0;
+          color: $colorTextBlack;
+          font: 1.5em/1.2 $regular;
+          text-transform: uppercase;
+        }
+        .time {
+          margin-bottom: 0;
+          padding-right: 80px;
+          color: $colorTextBlack;
+        }
+        span {
+          font: 1.3em/2 $light;
+          color: $colorTextGrey;
+        }
+
+      }
+
+    }
+    .item-title {
+      margin-bottom: 0;
+      padding-right: 60px;
+      font-size: 2.2em;
+    }
+  }
+}
+//END CURRICULUM PAGE***********************************
+
+//EXAMPLES PAGE*****************************************
+.examples-page {
+  background: #171a21;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  opacity: 1;
+  overflow: hidden;
+  //-webkit-transition: height 1s;
+  //-moz-transition: height 1s;
+  //-ms-transition: height 1s;
+  //-o-transition: height 1s;
+  //transition: height 1s;
+  &.fix{
+    position: fixed;
+    top:0;
+    width: 100%;
+  }
+  &.fix1{
+    position: fixed;
+    top:0;
+    width: 100%;
+  }
+  &.vision {
+    height: auto;
+  }
+  .box-top-left {
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  .box-top-right {
+    border-top: 1px solid;
+    border-right: 1px solid;
+  }
+  .box-bot-left {
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+  }
+  .box-bot-right {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+  .button-up {
+    width: 100%;
+    padding-top: 30px;
+    height: 60px;
+    top: 0;
+    left: 0;
+  }
+  .header-examples {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 50px;
+    .title {
+      font-size: 3.5em;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: $colorTextLight;
+      margin: 0 20px;
+      text-align: center;
+      font-family: $bold;
+    }
+    .line {
+      height: 3px;
+      background: $colorTextLight;
+      width: 20%;
+      border-radius: 50px;
+    }
+  }
+  .examples-content {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: 100px auto 50px;
+    * {
+      color: $colorTextLight;
+    }
+    .example {
+      position: relative;
+      width: 30%;
+      margin: 40px 20px 40px;
+      padding: 10px;
+      //name
+      .example-name {
+        font-size: 2em;
+        font-family: $regular;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        margin: 0 -10px;
+        position: absolute;
+        top: -30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      //img
+      .wrap-img {
+        position: relative;
+        overflow: hidden;
+        a {
+          width: 100%;
+          display: inline-block;
+          background-size: cover;
+          transition: filter .8s .4s, transform 1.2s 0s;
+          filter: grayscale(100%);
+          &:hover {
+            background: $colorTextBlack;
+            transform: scale(1.15);
+            filter: grayscale(0%);
+          }
+        }
+      }
+      .specification {
+        margin-top: 15px;
+        span {
+          letter-spacing: 1px;
+          font-size: 1em;
+          text-transform: uppercase;
+          & + span {
+            margin-left: 8px;
+            &::before {
+              content: "/";
+              font-family: "montserrat-light";
+              font-size: 1.15em;
+              color: #565656;
+              position: absolute;
+              margin-left: -8px;
+              margin-top: -1px;
+              font-family: $light;
+            }
+          }
+        }
+      }
+      //GIT
+      .git-hub {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1.7em;
+        letter-spacing: 3px;
+        font-family: $regular;
+        a {
+          &:hover {
+            -webkit-transition: color .3s;
+            -moz-transition: color .3s;
+            -ms-transition: color .3s;
+            -o-transition: color .3s;
+            transition: color .3s;
+            color: $colorTextGrey;
+            * {
+              -webkit-transition: color .3s;
+              -moz-transition: color .3s;
+              -ms-transition: color .3s;
+              -o-transition: color .3s;
+              transition: color .3s;
+              color: $colorTextGrey;
+            }
+          }
+        }
+        .fa {
+          margin-right: 5px;
+        }
+      }
+      //  DOWNLOAD (PSD)
+      .download-psd {
+        text-align: center;
+        margin: 15px 0;
+        &:hover{
+          -webkit-transition: color .3s;
+          -moz-transition: color .3s;
+          -ms-transition: color .3s;
+          -o-transition: color .3s;
+          transition: color .3s;
+          color: $colorTextGrey;
+          * {
+            -webkit-transition: color .3s;
+            -moz-transition: color .3s;
+            -ms-transition: color .3s;
+            -o-transition: color .3s;
+            transition: color .3s;
+            color: $colorTextGrey;
+          }
+        }
+      }
+    }
+  }
+}
+
+//END EXAMPLES PAGE*************************************
+
